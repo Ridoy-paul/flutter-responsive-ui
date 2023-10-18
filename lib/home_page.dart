@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import '/responsive/mobile_body.dart';
+import '/responsive/desktop_body.dart';
+import '/responsive/responsive_layout.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -11,12 +14,10 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    var width = MediaQuery.sizeOf(context).width;
     return Scaffold(
-      body: SafeArea(
-        child: Center(
-          child: Text("$width"),
-        ),
+      body: ResponsiveLayout(
+        mobileBody: MobileBody(),
+        desktopBody: DesktopBody(),
       ),
     );
   }
