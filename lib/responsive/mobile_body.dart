@@ -12,6 +12,15 @@ class MobileBody extends StatelessWidget {
         title: const Text("MOBILE", style: TextStyle(letterSpacing: 10),),
         centerTitle: true,
       ),
+      body: SafeArea(
+        child: Container(
+          margin: const EdgeInsets.all(2),
+          child: Align(
+            alignment: Alignment.center,
+            child: Text("This is the Mobile View.", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15,),),
+          ),
+        ),
+      ),
     );
   }
 }
